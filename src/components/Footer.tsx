@@ -10,8 +10,7 @@ const Footer = () => {
               Ink<span className="text-gradient-gold">finity</span>
             </h3>
             <p className="font-body text-muted-foreground text-sm leading-relaxed">
-              Custom tattoo art in a premium, inclusive, and judgment-free environment.
-              Your story, our craft.
+              Custom tattoo art. Your story, our craft.
             </p>
           </div>
 
@@ -49,10 +48,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="h-0.5 rainbow-bar rounded-full mb-8" />
+        <div className="h-px bg-border mb-8" />
 
         <p className="font-body text-xs text-muted-foreground text-center">
-          © {new Date().getFullYear()} Inkfinity Tattoos. All rights reserved. Every body is welcome here. 🌈
+          © {new Date().getFullYear()} Inkfinity Tattoos. All rights reserved.
         </p>
       </div>
     </footer>

@@ -9,28 +9,24 @@ import {
 
 const faqs = [
   {
-    q: "How do I book a consultation?",
-    a: "You can book directly through our website or reach out via Instagram or WhatsApp. We'll schedule a free consultation to discuss your ideas.",
+    q: "How do I book?",
+    a: "DM us on Instagram or WhatsApp. We'll set up a free consultation.",
   },
   {
     q: "Is a deposit required?",
-    a: "Yes, a small deposit is required to secure your appointment. This goes toward the final cost of your tattoo.",
+    a: "Yes, a small deposit secures your slot. It goes toward the final cost.",
   },
   {
-    q: "How much does a tattoo cost?",
-    a: "Pricing depends on size, complexity, and placement. We provide transparent quotes after your consultation — no hidden fees.",
+    q: "How much does it cost?",
+    a: "Depends on size, detail, and placement. We give transparent quotes — no surprises.",
   },
   {
-    q: "Is the studio LGBTQ+ friendly?",
-    a: "Absolutely. Inkfinity Tattoos is a safe, inclusive space for everyone. We celebrate diversity and ensure all clients feel respected and comfortable.",
-  },
-  {
-    q: "How should I prepare for my appointment?",
-    a: "Stay hydrated, eat a meal beforehand, wear comfortable clothing, and avoid alcohol 24 hours before your session.",
+    q: "How should I prepare?",
+    a: "Stay hydrated, eat well, wear comfy clothes, skip alcohol 24 hours before.",
   },
   {
     q: "Do you do cover-ups?",
-    a: "Yes, we specialize in creative cover-ups. Bring your existing tattoo to the consultation and we'll design something beautiful over it.",
+    a: "Yes. Bring your old tattoo to the consult and we'll design something fresh.",
   },
 ];
 
@@ -39,16 +35,16 @@ const FAQSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-background" ref={ref}>
+    <section id="faq" className="py-20 md:py-28 bg-background" ref={ref}>
       <div className="section-container max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground">
-            Frequently Asked <span className="text-gradient-gold">Questions</span>
+            Got <span className="text-gradient-gold">Questions?</span>
           </h2>
         </motion.div>
 

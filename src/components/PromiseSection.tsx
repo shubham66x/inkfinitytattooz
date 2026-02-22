@@ -3,10 +3,9 @@ import { useRef } from "react";
 import { Check } from "lucide-react";
 
 const promises = [
-  "Custom-designed tattoos (no copy-paste designs)",
-  "Safe, hygienic, and professional process",
-  "LGBTQ+ friendly and judgment-free environment",
-  "Artist who listens before inking",
+  "100% custom designs — no templates",
+  "Safe, sterile, professional process",
+  "Artist who actually listens",
   "Tattoos that age beautifully",
 ];
 
@@ -15,7 +14,7 @@ const PromiseSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 bg-card" ref={ref}>
+    <section className="py-20 md:py-28 bg-card" ref={ref}>
       <div className="section-container max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -23,16 +22,14 @@ const PromiseSection = () => {
           transition={{ duration: 0.7 }}
           className="font-display text-3xl md:text-5xl font-semibold mb-4 text-foreground"
         >
-          What Inkfinity Tattoos
-          <br />
-          <span className="text-gradient-gold">promises you</span>
+          Our <span className="text-gradient-gold">Promise</span>
         </motion.h2>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.2 }}
-          className="w-16 h-0.5 bg-primary mx-auto mb-12"
+          className="w-16 h-0.5 bg-primary mx-auto mb-10"
         />
 
         <div className="space-y-4">

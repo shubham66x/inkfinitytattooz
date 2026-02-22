@@ -7,8 +7,7 @@ const CTASection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="cta" className="py-24 md:py-32 bg-card relative overflow-hidden" ref={ref}>
-      {/* Subtle glow */}
+    <section id="cta" className="py-20 md:py-28 bg-card relative overflow-hidden" ref={ref}>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
 
       <div className="section-container relative z-10 text-center">
@@ -16,20 +15,20 @@ const CTASection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="font-display text-4xl md:text-6xl font-semibold text-foreground mb-6"
+          className="font-display text-4xl md:text-6xl font-semibold text-foreground mb-5"
         >
-          Ready to turn your idea
+          Ready to get
           <br />
-          <span className="text-gradient-gold">into art?</span>
+          <span className="text-gradient-gold">inked?</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="font-body text-lg text-muted-foreground mb-10"
+          className="font-body text-lg text-muted-foreground mb-8"
         >
-          Your story deserves better than random ink.
+          Your skin deserves art, not regret.
         </motion.p>
 
         <motion.div
@@ -42,7 +41,7 @@ const CTASection = () => {
             href="#"
             className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-base rounded-sm hover:bg-gold-glow transition-all duration-300 gold-border-glow"
           >
-            Book Appointment
+            Book Now
           </a>
           <a
             href="#"

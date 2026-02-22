@@ -1,14 +1,12 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { AlertTriangle } from "lucide-react";
 
 const problems = [
-  "Bad linework ruins skin",
-  "Cheap ink fades",
-  "Designs copied from Google lack meaning",
-  "Judgmental studios make people uncomfortable",
-  "No emotional connection to the art",
+  "Bad linework ruins skin forever",
+  "Cheap ink fades fast",
+  "Generic designs lack meaning",
+  "No vibe, no connection",
 ];
 
 const ProblemSection = () => {
@@ -16,7 +14,7 @@ const ProblemSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 bg-background" ref={ref}>
+    <section className="py-20 md:py-28 bg-background" ref={ref}>
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,13 +22,13 @@ const ProblemSection = () => {
           transition={{ duration: 0.7 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mb-12 text-foreground">
-            Choosing the wrong tattoo artist
+          <h2 className="font-display text-3xl md:text-5xl font-semibold mb-10 text-foreground">
+            Wrong artist?
             <br />
-            <span className="text-primary">can cost you forever.</span>
+            <span className="text-primary">Wrong forever.</span>
           </h2>
 
-          <div className="space-y-5">
+          <div className="space-y-4">
             {problems.map((problem, i) => (
               <motion.div
                 key={i}

@@ -2,6 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Instagram } from "lucide-react";
 
+const WHATSAPP_LINK = "https://wa.me/919877653557?text=Hey%20Inkfinity!%20I%20want%20to%20book%20a%20consultation";
+const INSTAGRAM_LINK = "https://www.instagram.com/inkfinity_tattooz?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr&fullpage=1";
+
 const CTASection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -38,17 +41,21 @@ const CTASection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#"
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-base rounded-sm hover:bg-gold-glow transition-all duration-300 gold-border-glow"
           >
-            Book Now
+            Book on WhatsApp
           </a>
           <a
-            href="#"
+            href={INSTAGRAM_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 border border-border text-foreground font-body font-semibold text-base rounded-sm hover:border-primary/50 transition-all duration-300 flex items-center gap-2"
           >
             <Instagram className="w-5 h-5" />
-            Instagram
+            @inkfinity_tattooz
           </a>
         </motion.div>
       </div>

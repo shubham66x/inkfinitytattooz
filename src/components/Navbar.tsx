@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="font-display text-2xl md:text-3xl font-semibold tracking-wide text-foreground">
-          Ink<span className="text-gradient-gold">finity</span>
+          Ink<span className="text-gradient-gold">finity</span> Tattooz
         </a>
 
         {/* Desktop */}
@@ -32,7 +32,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#cta"
+            href="https://wa.me/919877653557?text=Hey%20Inkfinity!%20I%20want%20to%20book%20a%20consultation"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-sm hover:bg-gold-glow transition-colors duration-300"
           >
             Book Now
@@ -66,7 +68,9 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#cta"
+                href="https://wa.me/919877653557?text=Hey%20Inkfinity!%20I%20want%20to%20book%20a%20consultation"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="px-5 py-3 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-sm text-center"
               >

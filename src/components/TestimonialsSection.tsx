@@ -3,10 +3,10 @@ import { useRef } from "react";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { text: "Absolute fire. Best tattoo I've ever got.", name: "Alex R." },
-  { text: "Felt comfortable from the jump. No cap.", name: "Jordan M." },
-  { text: "Design was exactly what I imagined.", name: "Casey L." },
-  { text: "Clean lines, healed perfect. 10/10.", name: "Sam K." },
+  { text: "Absolute fire. Best tattoo I've ever got.", name: "Arjun S." },
+  { text: "Felt comfortable from the jump. Super chill vibe.", name: "Priya M." },
+  { text: "Design was exactly what I imagined. No cap.", name: "Rohit K." },
+  { text: "Clean lines, healed perfect. 10/10.", name: "Simran P." },
 ];
 
 const TestimonialsSection = () => {

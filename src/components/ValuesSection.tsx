@@ -25,7 +25,7 @@ const ValuesSection = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground">
-            Why <span className="text-gradient-gold">Inkfinity</span>
+             Why <span className="text-gradient-gold">Inkfinity Tattooz</span>
           </h2>
         </motion.div>
 

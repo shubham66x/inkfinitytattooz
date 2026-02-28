@@ -27,7 +27,8 @@ const PortfolioSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 bg-background" ref={ref}>
+    <section id="portfolio" className="py-20 md:py-28 bg-background relative overflow-hidden" ref={ref}>
+      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[150px]" />
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

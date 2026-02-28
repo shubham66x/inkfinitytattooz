@@ -14,7 +14,8 @@ const ProblemSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 md:py-28 bg-background" ref={ref}>
+    <section className="py-20 md:py-28 bg-background relative overflow-hidden" ref={ref}>
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] rounded-full bg-destructive/5 blur-[120px]" />
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -11,13 +11,17 @@ const CTASection = () => {
 
   return (
     <section id="cta" className="py-20 md:py-28 bg-card relative overflow-hidden" ref={ref}>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]"
+        animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="section-container relative z-10 text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+          transition={{ duration: 0.8 }}
           className="font-display text-4xl md:text-6xl font-semibold text-foreground mb-5"
         >
           Ready to get
@@ -40,23 +44,27 @@ const CTASection = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
+          <motion.a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-base rounded-sm hover:bg-gold-glow transition-all duration-300 gold-border-glow"
+            className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-base rounded-sm hover:bg-gold-glow transition-all duration-300 gold-border-glow shimmer-btn"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 40px hsl(38 85% 58% / 0.3)" }}
+            whileTap={{ scale: 0.97 }}
           >
             Book on WhatsApp
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href={INSTAGRAM_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border border-border text-foreground font-body font-semibold text-base rounded-sm hover:border-primary/50 transition-all duration-300 flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
           >
             <Instagram className="w-5 h-5" />
             @inkfinity_tattooz
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

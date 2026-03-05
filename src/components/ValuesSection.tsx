@@ -35,12 +35,23 @@ const ValuesSection = () => {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
-                className="flex items-center gap-4 p-5 bg-card border border-border rounded-sm hover:border-primary/30 transition-colors duration-300"
+                initial={{ opacity: 0, y: 25, scale: 0.9 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.1, type: "spring", stiffness: 120 }}
+                whileHover={{
+                  y: -4,
+                  borderColor: "hsl(38 85% 58% / 0.4)",
+                  boxShadow: "0 8px 30px hsl(38 85% 58% / 0.08)",
+                  transition: { duration: 0.25 },
+                }}
+                className="flex items-center gap-4 p-5 bg-card border border-border rounded-sm transition-colors duration-300 group"
               >
-                <Icon className="w-6 h-6 text-primary flex-shrink-0" />
+                <motion.div
+                  whileHover={{ rotate: 10, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Icon className="w-6 h-6 text-primary flex-shrink-0 group-hover:drop-shadow-[0_0_8px_hsl(38_85%_58%/0.5)] transition-all duration-300" />
+                </motion.div>
                 <span className="font-body text-foreground font-medium">{v.title}</span>
               </motion.div>
             );

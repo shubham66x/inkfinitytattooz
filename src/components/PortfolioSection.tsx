@@ -46,12 +46,13 @@ const PortfolioSection = () => {
           {portfolio.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+              initial={{ opacity: 0, y: 40, rotateX: 10 }}
+              animate={inView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 + i * 0.08, type: "spring", stiffness: 100 }}
               className="relative aspect-[3/4] rounded-sm overflow-hidden cursor-pointer group"
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
               <img
                 src={item.src}
@@ -60,12 +61,16 @@ const PortfolioSection = () => {
                 loading="lazy"
               />
               <div
-                className={`absolute inset-0 bg-background/60 flex items-end p-4 transition-opacity duration-300 ${
-                  hoveredIndex === i ? "opacity-100" : "opacity-0"
+                className={`absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent flex items-end p-4 transition-all duration-500 ${
+                  hoveredIndex === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                 }`}
               >
                 <span className="font-display text-lg font-semibold text-primary">{item.label}</span>
               </div>
+              {/* Gold border on hover */}
+              <div className={`absolute inset-0 border-2 transition-all duration-500 rounded-sm ${
+                hoveredIndex === i ? "border-primary/40" : "border-transparent"
+              }`} />
             </motion.div>
           ))}
         </div>

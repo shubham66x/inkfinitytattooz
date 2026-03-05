@@ -10,10 +10,12 @@ import ValuesSection from "@/components/ValuesSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import FloatingParticles from "@/components/FloatingParticles";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background grain-overlay">
+      <FloatingParticles count={12} />
       <Navbar />
       <HeroSection />
       <PromiseSection />

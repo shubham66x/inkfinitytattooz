@@ -28,20 +28,36 @@ const ProcessSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto relative">
+          {/* Connecting line */}
+          <motion.div
+            className="hidden md:block absolute top-7 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"
+            initial={{ scaleX: 0 }}
+            animate={inView ? { scaleX: 1 } : {}}
+            transition={{ duration: 1, delay: 0.5 }}
+          />
+          
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
+                initial={{ opacity: 0, y: 30, scale: 0.8 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 + i * 0.15, type: "spring", stiffness: 150 }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className="text-center"
               >
-                <div className="w-14 h-14 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mx-auto mb-3">
+                <motion.div
+                  className="w-14 h-14 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mx-auto mb-3 relative"
+                  whileHover={{
+                    borderColor: "hsl(38 85% 58%)",
+                    boxShadow: "0 0 25px hsl(38 85% 58% / 0.25)",
+                    transition: { duration: 0.3 },
+                  }}
+                >
                   <Icon className="w-6 h-6 text-primary" />
-                </div>
+                </motion.div>
                 <div className="font-display text-xs text-primary mb-1 font-semibold">0{i + 1}</div>
                 <h3 className="font-display text-lg font-semibold text-foreground">{step.title}</h3>
               </motion.div>

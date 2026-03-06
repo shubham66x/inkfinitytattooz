@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import artistPortrait from "@/assets/artist-portrait.png";
+import artistPortrait from "@/assets/artist-portrait.jpg";
 
 const ArtistSection = () => {
   const ref = useRef(null);

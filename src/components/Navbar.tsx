@@ -36,11 +36,11 @@ const Navbar = () => {
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         <motion.a
           href="#"
-          className="font-display text-2xl md:text-3xl font-semibold tracking-wide text-foreground flex items-center gap-2"
+          className="font-display text-xl md:text-2xl font-semibold tracking-wide text-foreground flex items-center gap-2"
           whileHover={{ scale: 1.02 }}
         >
-          <img src={logo} alt="Inkfinity Tattooz logo" className="h-8 md:h-10 w-auto" />
-          Ink<span className="text-gradient-gold">finity</span> Tattooz
+          <img src={logo} alt="Inkfinity Tattooz logo" className="h-9 md:h-11 w-auto rounded-sm" />
+          <span>Ink<span className="text-gradient-gold">finity</span> Tattooz</span>
         </motion.a>
 
         {/* Desktop */}

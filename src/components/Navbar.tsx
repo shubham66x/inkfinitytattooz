@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "About", href: "#artist" },

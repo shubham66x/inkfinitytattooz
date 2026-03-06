@@ -11,14 +11,14 @@ import tattoo7 from "@/assets/tattoo-7.png";
 import tattoo8 from "@/assets/tattoo-8.png";
 
 const portfolio = [
-  { src: tattoo1, label: "Realism", alt: "Realistic lion tattoo" },
-  { src: tattoo2, label: "Portrait", alt: "Portrait style tattoo" },
-  { src: tattoo3, label: "Color", alt: "Colorful peacock feather tattoo" },
-  { src: tattoo4, label: "Mythology", alt: "Mythological tattoo" },
-  { src: tattoo5, label: "Anime", alt: "Dragon Ball Z anime tattoo" },
-  { src: tattoo6, label: "Anime", alt: "Anime style dragon tattoo" },
-  { src: tattoo7, label: "Black & Grey", alt: "Black and grey lion tattoo" },
-  { src: tattoo8, label: "Japanese", alt: "Japanese samurai mask tattoo" },
+  { src: tattoo1, label: "Black & Grey", alt: "Money themed sleeve tattoo" },
+  { src: tattoo2, label: "Portrait", alt: "Realistic portrait tattoo" },
+  { src: tattoo3, label: "Realism", alt: "Masked figure tattoo" },
+  { src: tattoo4, label: "Neo-Traditional", alt: "Lion with crown tattoo" },
+  { src: tattoo5, label: "Mythology", alt: "Spartan warrior tattoo" },
+  { src: tattoo6, label: "Script", alt: "Spartan with lettering tattoo" },
+  { src: tattoo7, label: "Japanese", alt: "Samurai and wolf tattoo" },
+  { src: tattoo8, label: "Color", alt: "Dragon with cherry blossoms tattoo" },
 ];
 
 const PortfolioSection = () => {

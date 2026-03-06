@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "About", href: "#artist" },
@@ -35,9 +36,10 @@ const Navbar = () => {
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         <motion.a
           href="#"
-          className="font-display text-2xl md:text-3xl font-semibold tracking-wide text-foreground"
+          className="font-display text-2xl md:text-3xl font-semibold tracking-wide text-foreground flex items-center gap-2"
           whileHover={{ scale: 1.02 }}
         >
+          <img src={logo} alt="Inkfinity Tattooz logo" className="h-8 md:h-10 w-auto" />
           Ink<span className="text-gradient-gold">finity</span> Tattooz
         </motion.a>
 
